@@ -1,0 +1,96 @@
+$red: #d54062;
+$orange: #ffa36c;
+$yellow: #ebdc87;
+$green: #799351;
+$black: #000;
+
+@import url('https://fonts.googleapis.com/css2?family=Kufam:wght@600&family=Open+Sans:wght@300&family=Source+Sans+Pro&display=swap');
+
+$font-title: 'Kufam', cursive;
+$font-text: 'Open Sans', sans-serif;
+$font-subtitle: 'Source Sans Pro', sans-serif;
+body{
+    margin: 0px;
+    background: radial-gradient(circle, $yellow 80%, $green 100%);
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1fr, auto);
+    gap: 10px;
+    &__title{
+        grid-column: 3/5;
+        grid-row: 3;
+        display: flex;
+        flex-direction: column;
+        border: solid;
+        border-radius: 10px;
+        border-color: $black;
+        color: #fff;
+        font-family: $font-title;
+        background-color: #d54063d0;
+        box-shadow:4px 4px 5px #ffa36c;
+        .title--head{
+            margin: 10px;
+            font-size: 35px;
+            align-self: center;
+        }
+    }
+
+    .container__form{
+        grid-column: 3/5;
+        grid-row: 6/10;
+        background-color: #d54063d3;
+        border: solid;
+        border-color: $black;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow:4px 4px 5px #ffa36c;
+        .form{
+            display: grid;
+            grid-template-columns: repeat(1, auto);
+            grid-template-rows: 1fr auto minmax(10px);
+            flex-direction: column;
+            gap:7px;
+            &__control{
+                border-radius: 5px;
+                border: none;
+                padding: 7px;
+                font-family: $font-text;
+            }
+            &__label{
+                font-family: $font-subtitle;
+                color: #fff;
+            }
+
+        }
+        .button{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            margin-top: 19px;
+            
+            .button--submit{    
+                grid-column: 3;
+                border: none;
+                background-color: $green;
+                border-radius: 5px;
+                color: #fff;
+                padding: 10px;
+                font-size: 17px;
+                font-family: $font-subtitle;
+            }
+            .button--submit:hover{    
+                grid-column: 3;
+                border: none;
+                background-color: #61773f;
+                border-radius: 5px;
+                color: #fff;
+                padding: 10px;
+                font-family: $font-subtitle;
+                font-size: 17px;
+            }
+        }
+    }
+
+
+}
